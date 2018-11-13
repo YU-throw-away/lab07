@@ -95,7 +95,7 @@ int main( int argc, char** argv )
 		} else {
 			/* We have an operand (hopefully) */
 			if( strlen( token ) != 1 ) {
-				fprintf( stderr, "Error: Token '%s' too large.\n", token );
+				fputs( "\nHELP: n1 n2 + returns the sum of n1 and n2\n n1 n2 * returns the product of n1n2\n n1 n2 - returns the differnce between n1 and n2 \n n1 n2 / returns n1 divided by n2 \n ", stderr );
 				exit( 1 );
 			}
 
@@ -112,7 +112,7 @@ int main( int argc, char** argv )
 	}
 
 	if( stacksize != 1 ) {
-		fputs( "Too many arguments on stack.\n", stderr );
+		fputs( "Too few arguments on stack.\n", stderr );
 		exit( 1 );
 	}
 
